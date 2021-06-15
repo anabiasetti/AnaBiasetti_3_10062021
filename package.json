@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anabiasetti/AnaBiasetti_3_10062021.git"
+  },
+  "author": "Ana Biasetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anabiasetti/AnaBiasetti_3_10062021/issues"
+  },
+  "homepage": "https://github.com/anabiasetti/AnaBiasetti_3_10062021#readme"
+}
