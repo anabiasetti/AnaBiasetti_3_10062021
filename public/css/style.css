@@ -1,6 +1,5 @@
-/*@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";*/
+/*@import "./utils/functions";*/
+/*@import "./utils/extensions";*/
 *,
 *::after,
 *::before {
@@ -27,10 +26,12 @@ h1 {
 
 button {
   font-family: "Roboto", sans-serif;
-  font-size: 2.75rem;
 }
 
-/*@import "./components/buttons";*/
+.btn {
+  border-radius: 25%;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -64,13 +65,53 @@ button {
   text-decoration: none;
   color: black;
   margin-right: 2em;
+  margin-bottom: 3px;
 }
 
 /*@import "./layouts/container";
-@import "./layouts/form";
+@import "./layouts/form";*/
+/*@import "./pages/work";*/
+.about {
+  margin-top: 1em;
+}
+.about__heading {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.4em;
+  text-align: center;
+  margin-left: 18px;
+  margin-right: 34px;
+  margin-top: 37px;
+}
+.about__description {
+  font-size: 1.8em;
+  text-align: center;
+  margin-left: 28px;
+  margin-right: 21px;
+  margin-top: 11px;
+}
+.about__btn {
+  /*font-size: 1.6em;
+  margin-top: 30px;
+  margin-left: 88px;*/
+  background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
+  border-radius: 38px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.6em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 222px;
+  height: 51px;
+  margin: 27px auto 0;
+  border: 0.1rem solid #ff79da;
+}
 
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";*/
+/*@import "./pages/project";*/
 
 /*# sourceMappingURL=style.css.map */

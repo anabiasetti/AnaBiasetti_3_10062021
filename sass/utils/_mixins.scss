@@ -1,0 +1,22 @@
+@mixin border($colour: $colour-secondary) {
+  border: 0.1rem solid $colour;
+}
+
+@mixin btn {
+  background: linear-gradient(to top, $colour-primary 0%, $colour-secondary 100%);
+  border-radius: 38px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.6em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 222px;
+  height: 51px;
+  margin: 27px auto 0;
+  @include border;
+}
