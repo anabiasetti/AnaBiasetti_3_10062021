@@ -28,10 +28,7 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
-.btn {
-  border-radius: 25%;
-}
-
+/*@import "./components/buttons";*/
 .header {
   display: flex;
   align-items: center;
@@ -41,8 +38,9 @@ button {
 .header__logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 3em;
-  margin-left: 103px;
-  margin-top: 13px;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.433em;
 }
 
 .nav {
@@ -68,11 +66,13 @@ button {
   margin-bottom: 3px;
 }
 
-/*@import "./layouts/container";
-@import "./layouts/form";*/
+/*@import "./layouts/container";*/
+/*@import "./layouts/form";*/
 /*@import "./pages/work";*/
 .about {
-  margin-top: 1em;
+  padding-top: 3.6em;
+  background-color: #f6f6f6;
+  height: 28.5em;
 }
 .about__heading {
   font-family: "Roboto", sans-serif;
@@ -81,7 +81,6 @@ button {
   text-align: center;
   margin-left: 18px;
   margin-right: 34px;
-  margin-top: 37px;
 }
 .about__description {
   font-size: 1.8em;
@@ -91,9 +90,6 @@ button {
   margin-top: 11px;
 }
 .about__btn {
-  /*font-size: 1.6em;
-  margin-top: 30px;
-  margin-left: 88px;*/
   background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   border-radius: 38px;
   display: inline-block;
@@ -110,6 +106,60 @@ button {
   height: 51px;
   margin: 27px auto 0;
   border: 0.1rem solid #ff79da;
+}
+.about__btn:hover {
+  background: linear-gradient(to top, #ae80e5 0%, #fface8 100%);
+}
+
+.fonctionnement {
+  background-color: white;
+  padding-top: 4.7em;
+}
+.fonctionnement__heading {
+  font-family: "Roboto";
+  font-size: 2.4em;
+  margin-left: 0.875em;
+}
+.fonctionnement .steps__step {
+  font-size: 1.6em;
+  font-weight: 700;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 28px 21px 0px 30px;
+  border: 1px solid #f2f2f2;
+  border-radius: 21px;
+  box-shadow: 2px 2px 2px 2px rgba(242, 242, 242, 0.9);
+  background-color: #f6f6f6;
+}
+.fonctionnement .steps__step--link {
+  color: black;
+  text-decoration: none;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  margin-top: 6.5em;
+}
+.restaurants__heading {
+  font-family: "Roboto";
+  font-size: 2.4em;
+  margin-left: 0.875em;
+  padding-top: 2.2em;
+}
+.restaurants__cartes {
+  display: flex;
+  flex-direction: column;
+}
+.restaurants__images {
+  width: 354px;
+  height: 192px;
+  padding-top: 21px;
+  padding-left: 21px;
+  object-fit: cover;
 }
 
 /*@import "./pages/project";*/
