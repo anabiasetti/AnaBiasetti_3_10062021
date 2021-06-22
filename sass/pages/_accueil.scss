@@ -70,7 +70,8 @@
 .restaurants {
   background-color: #f6f6f6;
   margin-top: 6.5em;
-  padding-bottom: 12em;
+  padding-bottom: 6em;
+
   &__heading {
     width: 33%;
     text-align: center;
@@ -78,37 +79,41 @@
     font-size: 2.4em;
     margin-left: 0.875em;
     padding-top: 2.2em;
+    padding-bottom: 0.9em;
   }
-  &__figures {
-    display: flex;
-    flex-direction: column;
-  }
-  &__links {
-    text-decoration: none;
-    color: black;
-    font-size: 1.6em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+
+  .card {
     border: 1px solid #f2f2f2;
     border-bottom-left-radius: 21px;
     border-bottom-right-radius: 21px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
-  }
+    width: 100%;
+    border-radius: 15px;
 
-  &__images {
-    @include images;
-  }
-}
+    &__image {
+      width: auto;
+      @include images;
+    }
+    .card__description {
+      text-decoration: none;
 
-.restaurants__description {
-  margin-left: 34px;
-  color: black;
-  margin-top: 21px;
-  font-size: 15px;
-  letter-spacing: 0.01em;
-  .icon__heart {
-    position: absolute;
-    right: 80px;
+      padding: 12px 14px;
+      font-size: 1.6em;
+      height: 74px;
+      letter-spacing: 0.01em;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2px;
+    }
+
+    .card__iconheart {
+      align-self: flex-end;
+      font-size: 24px;
+      position: relative;
+      top: -41px;
+      left: -10px;
+    }
   }
 }

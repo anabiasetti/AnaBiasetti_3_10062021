@@ -1,0 +1,10 @@
+.restocards__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  &--link {
+    text-decoration: none;
+    color: black;
+  }
+}

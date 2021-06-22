@@ -44,11 +44,6 @@ button {
 }
 
 .nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
   width: 100%;
   height: 5em;
   margin-top: 0.6em;
@@ -57,18 +52,11 @@ button {
 .nav__icon {
   font-size: 1.6em;
 }
-.nav__link {
-  display: inline;
-  font-size: 1.6em;
-  text-decoration: none;
-  color: black;
-  margin-right: 2em;
-  margin-bottom: 3px;
-}
 
 .footer {
   background-color: #353535;
   color: white;
+  height: 200px;
 }
 .footer__logo {
   font-family: "Shrikhand", sans-serif;
@@ -78,13 +66,15 @@ button {
 }
 .footer__links {
   font-size: 1.6em;
-  margin-left: 1.2em;
+  padding-left: 1.2em;
   padding-top: 1em;
   line-height: 26px;
   list-style: none;
-  letter-spacing: 0.01em;
   text-decoration: none;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .footer__listlink--contact {
   text-decoration: none;
@@ -94,8 +84,36 @@ button {
   padding-right: 0.5em;
 }
 
-/*@import "./layouts/container";*/
-/*@import "./layouts/form";*/
+.restocards__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.restocards__container--link {
+  text-decoration: none;
+  color: black;
+}
+
+.form__accueil {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding-left: 116px;
+  margin-top: 16px;
+}
+
+#place {
+  display: inline;
+  font-size: 1.6em;
+  text-decoration: none;
+  color: black;
+  border: none;
+  background-color: #eaeaea;
+}
+
 /*@import "./pages/work";*/
 .about {
   padding-top: 3.6em;
@@ -189,7 +207,7 @@ button {
 .restaurants {
   background-color: #f6f6f6;
   margin-top: 6.5em;
-  padding-bottom: 12em;
+  padding-bottom: 6em;
 }
 .restaurants__heading {
   width: 33%;
@@ -198,45 +216,41 @@ button {
   font-size: 2.4em;
   margin-left: 0.875em;
   padding-top: 2.2em;
+  padding-bottom: 0.9em;
 }
-.restaurants__figures {
-  display: flex;
-  flex-direction: column;
-}
-.restaurants__links {
-  text-decoration: none;
-  color: black;
-  font-size: 1.6em;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.restaurants .card {
   border: 1px solid #f2f2f2;
   border-bottom-left-radius: 21px;
   border-bottom-right-radius: 21px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  border-radius: 15px;
 }
-.restaurants__images {
-  /*width: 354px;*/
-  height: 192px;
-  padding-top: 21px;
-  padding-left: 21px;
+.restaurants .card__image {
+  width: auto;
+  height: 173px;
+  width: 337px;
   object-fit: cover;
-  border-top-left-radius: 21px;
-  border-top-right-radius: 21px;
-  width: 66%;
-  object-position: 0 104%;
+  border-radius: 15px 15px 0 0;
+  object-position: 0 68%;
 }
-
-.restaurants__description {
-  margin-left: 34px;
-  color: black;
-  margin-top: 21px;
-  font-size: 15px;
+.restaurants .card .card__description {
+  text-decoration: none;
+  padding: 12px 14px;
+  font-size: 1.6em;
+  height: 74px;
   letter-spacing: 0.01em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
 }
-.restaurants__description .icon__heart {
-  position: absolute;
-  right: 80px;
+.restaurants .card .card__iconheart {
+  align-self: flex-end;
+  font-size: 24px;
+  position: relative;
+  top: -41px;
+  left: -10px;
 }
 
 /*@import "./pages/project";*/

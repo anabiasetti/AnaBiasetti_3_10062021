@@ -25,13 +25,9 @@
 }
 
 @mixin images {
-  /*width: 354px;*/
-  height: 192px;
-  padding-top: 21px;
-  padding-left: 21px;
+  height: 173px;
+  width: 337px;
   object-fit: cover;
-  border-top-left-radius: 21px;
-  border-top-right-radius: 21px;
-  width: 66%;
-  object-position: 0 104%;
+  border-radius: 15px 15px 0 0;
+  object-position: 0 68%;
 }
