@@ -30,30 +30,85 @@
     margin-left: 0.875em;
   }
   .steps {
+    list-style: none;
+    counter-reset: counter-steps;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+    margin-top: 34px;
     &__step {
-      @include steps;
-
-      &--link {
-        color: black;
-        text-decoration: none;
+      font-size: 1.6em;
+      font-weight: 700;
+      height: 72px;
+      cursor: pointer;
+      border: 1px solid #f2f2f2;
+      border-radius: 21px;
+      box-shadow: 2px 2px 2px 2px rgba(242, 242, 242, 0.9);
+      background-color: #f6f6f6;
+      counter-increment: counter-steps;
+      width: 90.5%;
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      &::before {
+        content: counter(counter-steps);
+        color: #fff;
+        background-color: $colour-primary;
+        border: 1px solid $colour-primary;
+        border-radius: 50%;
+        padding: 2px 8px 2px 8px;
+        font-size: 0.9em;
+        transform: translateX(-12px);
       }
+    }
+    &__icon {
+      font-size: 1.3em;
     }
   }
 }
 .restaurants {
   background-color: #f6f6f6;
   margin-top: 6.5em;
+  padding-bottom: 12em;
   &__heading {
+    width: 33%;
+    text-align: center;
     font-family: "Roboto";
     font-size: 2.4em;
     margin-left: 0.875em;
     padding-top: 2.2em;
   }
-  &__cartes {
+  &__figures {
     display: flex;
     flex-direction: column;
   }
+  &__links {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f2f2f2;
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+  }
+
   &__images {
     @include images;
+  }
+}
+
+.restaurants__description {
+  margin-left: 34px;
+  color: black;
+  margin-top: 21px;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  .icon__heart {
+    position: absolute;
+    right: 80px;
   }
 }

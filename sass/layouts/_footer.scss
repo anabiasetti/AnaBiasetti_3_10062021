@@ -1,0 +1,29 @@
+.footer {
+  background-color: #353535;
+  color: white;
+
+  &__logo {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 1.9em;
+    padding-top: 1em;
+    margin-left: 1.2em;
+  }
+
+  &__links {
+    font-size: 1.6em;
+    margin-left: 1.2em;
+    padding-top: 1em;
+    line-height: 26px;
+    list-style: none;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    color: white;
+  }
+  &__listlink--contact {
+    text-decoration: none;
+    color: white;
+  }
+  .footer__linkicon {
+    padding-right: 0.5em;
+  }
+}
