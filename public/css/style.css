@@ -29,18 +29,36 @@ button {
 }
 
 /*@import "./components/buttons";*/
-.header {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+/* &--menu {
+      width: 90%;
+      font-size: 2.9em;
+    }*/
+/* header la palette*/
+.headerpages__menu {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5em;
 }
-.header__logo {
+.headerpages__logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 3em;
   width: 100%;
   text-align: center;
   margin-top: 0.433em;
+  padding-right: 2em;
+}
+
+.return__accueil {
+  text-decoration: none;
+  color: black;
+}
+.return__accueil--icon {
+  font-size: 1.9em;
+  padding-top: 0.6em;
+  padding-left: 1.26em;
 }
 
 .nav {
@@ -57,12 +75,17 @@ button {
   background-color: #353535;
   color: white;
   height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .footer__logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.9em;
   padding-top: 1em;
   margin-left: 1.2em;
+  width: 100%;
+  text-align: center;
 }
 .footer__links {
   font-size: 1.6em;
@@ -104,8 +127,7 @@ button {
   padding-left: 116px;
   margin-top: 16px;
 }
-
-#place {
+.form__accueil input {
   display: inline;
   font-size: 1.6em;
   text-decoration: none;
@@ -114,7 +136,27 @@ button {
   background-color: #eaeaea;
 }
 
-/*@import "./pages/work";*/
+.presentation img {
+  height: 227px;
+  width: 337px;
+  object-fit: cover;
+  object-position: 0 68%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.header__logo {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 3em;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.433em;
+}
+
 .about {
   padding-top: 3.6em;
   background-color: #f6f6f6;
@@ -210,11 +252,12 @@ button {
   padding-bottom: 6em;
 }
 .restaurants__heading {
-  width: 33%;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   font-family: "Roboto";
   font-size: 2.4em;
-  margin-left: 0.875em;
+  padding-right: 8.875em;
   padding-top: 2.2em;
   padding-bottom: 0.9em;
 }
