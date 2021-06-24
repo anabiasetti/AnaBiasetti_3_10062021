@@ -1,13 +1,32 @@
-.header {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
+/* &--menu {
+      width: 90%;
+      font-size: 2.9em;
+    }*/
+/* header la palette*/
+.headerpages {
+  &__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5em;
+  }
   &__logo {
     font-family: "Shrikhand", sans-serif;
     font-size: 3em;
     width: 100%;
     text-align: center;
     margin-top: 0.433em;
+    padding-right: 2em;
+  }
+}
+.return__accueil {
+  text-decoration: none;
+  color: black;
+  &--icon {
+    font-size: 1.9em;
+    padding-top: 0.6em;
+    padding-left: 1.26em;
   }
 }

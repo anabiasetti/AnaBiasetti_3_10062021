@@ -6,12 +6,12 @@
   gap: 2em;
   padding-left: 116px;
   margin-top: 16px;
-}
-#place {
-  display: inline;
-  font-size: 1.6em;
-  text-decoration: none;
-  color: black;
-  border: none;
-  background-color: #eaeaea;
+  & input {
+    display: inline;
+    font-size: 1.6em;
+    text-decoration: none;
+    color: black;
+    border: none;
+    background-color: #eaeaea;
+  }
 }

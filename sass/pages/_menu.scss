@@ -1,0 +1,8 @@
+.presentation {
+  & img {
+    height: 227px;
+    width: 337px;
+    object-fit: cover;
+    object-position: 0 68%;
+  }
+}
