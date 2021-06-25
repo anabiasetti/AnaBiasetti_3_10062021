@@ -1,8 +1,69 @@
 .presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   & img {
-    height: 227px;
-    width: 337px;
+    height: 262px;
+    width: 100%;
     object-fit: cover;
-    object-position: 0 68%;
+    object-position: 0% 15%;
+  }
+  &__heading {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #f6f6f6;
+    padding-top: 3.6em;
+    margin-top: -3.6em;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+
+    &--iconheart {
+      font-size: 2.4em;
+    }
+  }
+  &__titre {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 2.6em;
+    text-align: center;
+  }
+}
+main {
+  background-color: #f6f6f6;
+}
+/*article class="entry*/
+.article {
+  &__heading {
+    display: flex;
+    align-content: flex-start;
+    font-size: 1.7em;
+    font-weight: 400;
+    padding-top: 1.65em;
+    width: 100%;
+    padding-left: 1em;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    padding-top: 1.8em;
+    &__option {
+      @include options;
+    }
+  }
+}
+.button {
+  padding-bottom: 57px;
+  border: none;
+  text-align: center;
+
+  &__command {
+    @include btn;
   }
 }

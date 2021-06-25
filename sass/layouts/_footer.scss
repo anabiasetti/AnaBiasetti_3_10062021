@@ -3,7 +3,7 @@
   color: white;
   height: 200px;
   display: flex;
-  justify-content: center;
+  /*justify-content: center;media query*/
   flex-wrap: wrap;
 
   &__logo {
@@ -12,7 +12,7 @@
     padding-top: 1em;
     margin-left: 1.2em;
     width: 100%;
-    text-align: center;
+    /*text-align: center;media query*/
   }
 
   &__links {
