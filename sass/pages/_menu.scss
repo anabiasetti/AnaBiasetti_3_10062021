@@ -64,6 +64,8 @@ main {
   text-align: center;
 
   &__command {
+    width: 190px;
+    margin: 68px auto 0;
     @include btn;
   }
 }
