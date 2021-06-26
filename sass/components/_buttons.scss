@@ -1,4 +1,21 @@
-/*.btn {
+.button {
+  display: flex;
+  border: none;
+  background: none;
+  &__accueil {
+    margin: 31px auto;
+  }
+  &__menu {
+    flex-direction: row;
+    justify-content: center;
+    margin: 70px auto;
+    padding-bottom: 18%;
+    &--command {
+      padding: 0.9em 2.8em;
+      @include btn;
+    }
+  }
+}
+.btn {
   @include btn;
 }
-*/

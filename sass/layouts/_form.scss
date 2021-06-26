@@ -14,4 +14,7 @@
     border: none;
     background-color: #eaeaea;
   }
+  & input::placeholder {
+    opacity: 1;
+  }
 }

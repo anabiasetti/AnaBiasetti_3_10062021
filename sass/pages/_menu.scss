@@ -58,14 +58,3 @@ main {
     }
   }
 }
-.button {
-  padding-bottom: 57px;
-  border: none;
-  text-align: center;
-
-  &__command {
-    width: 190px;
-    margin: 68px auto 0;
-    @include btn;
-  }
-}

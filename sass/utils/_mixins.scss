@@ -4,21 +4,16 @@
 
 @mixin btn {
   background: linear-gradient(to top, $colour-primary 0%, $colour-secondary 100%);
-  border-radius: 38px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.6em;
   color: white;
+  text-decoration: none;
+  font-size: 1.2em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
   text-align: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 222px;
-  height: 51px;
-  margin: 27px auto 0;
-  @include border;
+  cursor: pointer;
+  border-radius: 55px;
+  cursor: pointer;
   &:hover {
     background: linear-gradient(to top, lighten($colour-primary, 10%) 0%, lighten($colour-secondary, 10%) 100%);
   }
