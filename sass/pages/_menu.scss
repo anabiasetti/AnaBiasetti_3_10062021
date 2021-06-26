@@ -32,8 +32,8 @@
 main {
   background-color: #f6f6f6;
 }
-/*article class="entry*/
-.article {
+/*section class="choix"*/
+.choix {
   &__heading {
     display: flex;
     align-content: flex-start;
@@ -42,12 +42,15 @@ main {
     padding-top: 1.65em;
     width: 100%;
     padding-left: 1em;
+    &--desserts {
+      padding-top: 2.7em;
+    }
   }
   .options {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 1em;
+    gap: 2em;
     align-content: center;
     justify-items: center;
     align-items: center;
@@ -57,4 +60,35 @@ main {
       @include options;
     }
   }
+}
+
+.article {
+  padding: 8px 14px 12px 10px;
+  /*padding: 12px 15px;*/
+  letter-spacing: 0.01em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 9px;
+  &__heading {
+    font-size: 1.1em;
+    font-weight: 700;
+    &--detail {
+      font-size: 0.9em;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+  }
+  &__prix {
+    align-self: flex-end;
+    font-size: 1em;
+    position: relative;
+    top: -28px;
+    left: -2px;
+    opacity: 0.7;
+  }
+}
+
+.footer__menu {
+  margin-top: -41px;
 }

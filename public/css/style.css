@@ -39,7 +39,7 @@ button {
 .button__menu {
   flex-direction: row;
   justify-content: center;
-  margin: 70px auto;
+  margin: 42px auto;
   padding-bottom: 18%;
 }
 .button__menu--command {
@@ -122,10 +122,10 @@ button {
 .footer {
   background-color: #353535;
   color: white;
-  height: 200px;
   display: flex;
   /*justify-content: center;media query*/
   flex-wrap: wrap;
+  padding-bottom: 30px;
 }
 .footer__logo {
   font-family: "Shrikhand", sans-serif;
@@ -222,8 +222,8 @@ main {
   background-color: #f6f6f6;
 }
 
-/*article class="entry*/
-.article__heading {
+/*section class="choix"*/
+.choix__heading {
   display: flex;
   align-content: flex-start;
   font-size: 1.7em;
@@ -232,18 +232,21 @@ main {
   width: 100%;
   padding-left: 1em;
 }
-.article .options {
+.choix__heading--desserts {
+  padding-top: 2.7em;
+}
+.choix .options {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 1em;
+  gap: 2em;
   align-content: center;
   justify-items: center;
   align-items: center;
   list-style: none;
   padding-top: 1.8em;
 }
-.article .options__option {
+.choix .options__option {
   font-size: 1.6em;
   font-weight: 700;
   height: 72px;
@@ -251,8 +254,39 @@ main {
   cursor: pointer;
   border: 1px solid #f2f2f2;
   border-radius: 21px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.01);
   background-color: white;
+}
+
+.article {
+  padding: 8px 14px 12px 10px;
+  /*padding: 12px 15px;*/
+  letter-spacing: 0.01em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 9px;
+}
+.article__heading {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.article__heading--detail {
+  font-size: 0.9em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+.article__prix {
+  align-self: flex-end;
+  font-size: 1em;
+  position: relative;
+  top: -28px;
+  left: -2px;
+  opacity: 0.7;
+}
+
+.footer__menu {
+  margin-top: -41px;
 }
 
 .header {
@@ -373,7 +407,7 @@ main {
   border: 1px solid #f2f2f2;
   border-bottom-left-radius: 21px;
   border-bottom-right-radius: 21px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.04);
   width: 100%;
   border-radius: 15px;
 }

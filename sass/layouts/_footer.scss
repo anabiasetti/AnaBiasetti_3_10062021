@@ -1,10 +1,10 @@
 .footer {
   background-color: #353535;
   color: white;
-  height: 200px;
   display: flex;
   /*justify-content: center;media query*/
   flex-wrap: wrap;
+  padding-bottom: 30px;
 
   &__logo {
     font-family: "Shrikhand", sans-serif;

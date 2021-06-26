@@ -20,7 +20,7 @@
       </nav>
     </header>
     <main>
-      <div class="presentation">
+      <section class="presentation">
         <img
           class="presentation__img"
           src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -30,37 +30,92 @@
           <h2 class="presentation__titre">La palette du goût</h2>
           <i class="far fa-heart presentation__heading--iconheart"></i>
         </div>
-      </div>
+      </section>
 
-      <article class="article">
-        <h3 class="article__heading">ENTRÉES</h3>
+      <section class="choix">
+        <h3 class="choix__heading choix__heading--entry">ENTRÉES</h3>
         <ul class="options">
-          <li class="options__option">Fricassée d'escargot Au piment d'Espelette 25€</li>
-          <li class="options__option">Foie gras de canard mi-cuit Et ses copeaux de truffe noire 35€</li>
-          <li class="options__option">Oeuf au plat Assaisonné à la truffe sur lit de caviar 20€</li>
+          <li class="options__option">
+            <article class="article">
+            <h4 class="article__heading">Fricassée d'escargot</h4>
+            <p class="article__heading--detail"> Au piment d'Espelette</p>
+            <p class="article__prix"> 25€</p>
+          </article>
+          </li>
+          <li class="options__option">
+            <article class="article">
+              <h4 class="article__heading">Foie gras de canard mi-cuit</h4>
+              <p class="article__heading--detail"> Et ses copeaux de truffe noire</p> 
+              <p class="article__prix">35€</p>
+            </article>
+          </li>
+          <li class="options__option">
+            <article class="article">
+              <h4 class="article__heading"> Oeuf au plat</h4>
+              <p class="article__heading--detail"> Assaisonné à la truffe sur lit de caviar</p> 
+              <p class="article__prix">20€</p>
+            </article>
+
+            </li>
         </ul>
-      </article>
-      <article class="article">
-        <h3 class="article__heading">PLATS</h3>
+      </section>
+      <section class="choix">
+        <h3 class="choix__heading choix__heading--plats">PLATS</h3>
         <ul class="options">
-          <li class="options__option">Filet de boeuf aux herbes Accompagné de sa ribambelle de légumes 40€</li>
-          <li class="options__option">Parmentier de queue de boeuf À la truffe noire sur sa purée de panais 35€</li>
-          <li class="options__option">Filet de turbot Aux agrumes 44€</li>
+          <li class="options__option">
+            <article class="article"> 
+              <h4 class="article__heading"> Filet de boeuf aux herbes</h4>
+              <p class="article__heading--detail"> Accompagné de sa ribambelle de légumes</p> 
+              <p class="article__prix">40€</p>
+            </article>
+             </li>
+          <li class="options__option">
+            <article class="article">
+              <h4 class="article__heading">Parmentier de queue de boeuf </h4>
+              <p class="article__heading--detail">À la truffe noire sur sa purée de panais</p> 
+              <p class="article__prix">35€</p>
+            </article>
+            </li>
+          <li class="options__option">
+            <article class="article">
+              <h4 class="article__heading">Filet de turbot</h4>
+              <p class="article__heading--detail">Aux agrumes</p> 
+              <p class="article__prix">44€</p>
+            </article>
+            </li>
         </ul>
-      </article>
-      <article class="article">
-        <h3 class="article__heading">DESSERTS</h3>
+      </section>
+      <section class="choix">
+        <h3 class="choix__heading choix__heading--desserts">DESSERTS</h3>
         <ul class="options">
-          <li class="options__option">Paris-Brest Revisité 18€</li>
-          <li class="options__option">Macaron au chocolat d'exception Et glace à la vanille de Madagascar 22€</li>
-          <li class="options__option">Mousse au chocolat Au piment d'Espelette et à la truffe noire 23€</li>
+          <li class="options__option">
+            <article class="article">
+          </h4 class="article__heading">Paris-Brest</h4> 
+            <p class="article__heading--detail">Revisité </p>
+            <p class="article__prix">18€</p>
+          </article>
+        </li>
+          <li class="options__option">
+            <article class="article">
+            </h4 class="article__heading">Macaron au chocolat d'exception </h4> 
+              <p class="article__heading--detail">Et glace à la vanille de Madagascar</p>
+              <p class="article__prix">22€</p>
+            </article>
+             </li>
+          <li class="options__option">
+            <article class="article">
+            </h4 class="article__heading">Mousse au chocolat</h4> 
+              <p class="article__heading--detail">Au piment d'Espelette et à la truffe noire</p>
+              <p class="article__prix">23€</p>
+            </article>
+              </li>
         </ul>
-      </article>
+      </section>
       <button class="button button__menu">
         <a href="#" class="button__menu--command">Commander</a>
       </button>
     </main>
-    <footer class="footer">
+    <footer class="footer footer__menu">
       <h2 class="footer__logo">ohmyfood</h2>
       <ul class="footer__links">
         <li class="footer__list">
