@@ -28,10 +28,55 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
-/*.btn {
-  @include btn;
+.button {
+  display: flex;
+  border: none;
+  background: none;
 }
-*/
+.button__accueil {
+  margin: 31px auto;
+}
+.button__menu {
+  flex-direction: row;
+  justify-content: center;
+  margin: 70px auto;
+  padding-bottom: 18%;
+}
+.button__menu--command {
+  padding: 0.9em 2.8em;
+  background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 55px;
+  cursor: pointer;
+}
+.button__menu--command:hover {
+  background: linear-gradient(to top, #ae80e5 0%, #fface8 100%);
+}
+
+.btn {
+  background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 55px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(to top, #ae80e5 0%, #fface8 100%);
+}
+
 /* &--menu {
       width: 90%;
       font-size: 2.9em;
@@ -138,6 +183,9 @@ button {
   border: none;
   background-color: #eaeaea;
 }
+.form__accueil input::placeholder {
+  opacity: 1;
+}
 
 .presentation {
   display: flex;
@@ -207,35 +255,6 @@ main {
   background-color: white;
 }
 
-.button {
-  padding-bottom: 57px;
-  border: none;
-  text-align: center;
-}
-.button__command {
-  width: 190px;
-  margin: 68px auto 0;
-  background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
-  border-radius: 38px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.6em;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 222px;
-  height: 51px;
-  margin: 27px auto 0;
-  border: 0.1rem solid #ff79da;
-}
-.button__command:hover {
-  background: linear-gradient(to top, #ae80e5 0%, #fface8 100%);
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -270,36 +289,33 @@ main {
   margin-right: 21px;
   margin-top: 11px;
 }
-.about__btn {
+.about .btn {
+  padding: 0.9em 1.5em;
   background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
-  border-radius: 38px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.6em;
   color: white;
+  text-decoration: none;
+  font-size: 1.2em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
   text-align: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 222px;
-  height: 51px;
-  margin: 27px auto 0;
-  border: 0.1rem solid #ff79da;
+  cursor: pointer;
+  border-radius: 55px;
+  cursor: pointer;
 }
-.about__btn:hover {
+.about .btn:hover {
   background: linear-gradient(to top, #ae80e5 0%, #fface8 100%);
 }
 
 .fonctionnement {
   background-color: white;
   padding-top: 4.7em;
+  padding-bottom: 6em;
 }
 .fonctionnement__heading {
   font-family: "Roboto";
-  font-size: 2.4em;
   margin-left: 0.875em;
+  font-size: 2.4em;
 }
 .fonctionnement .steps {
   list-style: none;
@@ -351,7 +367,6 @@ main {
   font-family: "Roboto";
   font-size: 2.4em;
   padding-right: 8.875em;
-  padding-top: 2.2em;
   padding-bottom: 0.9em;
 }
 .restaurants .card {
