@@ -7,6 +7,10 @@
     width: 100%;
     object-fit: cover;
     object-position: 0% 15%;
+    @include desktopmenu {
+      object-position: 0% 56%;
+      justify-content: center;
+    }
   }
   &__heading {
     display: flex;
@@ -21,19 +25,37 @@
 
     &--iconheart {
       font-size: 2.4em;
+      @include desktopmenu {
+        font-size: 3.5em;
+      }
     }
   }
   &__titre {
     font-family: "Shrikhand", sans-serif;
     font-size: 2.6em;
     text-align: center;
+    @include desktopmenu {
+      font-size: 3.6em;
+    }
   }
 }
 main {
   background-color: #f6f6f6;
 }
 /*section class="choix"*/
+
+/*.selection {
+  @include grandecran {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}*/
+
 .choix {
+  @include grandecran {
+    margin: auto;
+  }
   &__heading {
     display: flex;
     align-content: flex-start;
@@ -42,8 +64,19 @@ main {
     padding-top: 1.65em;
     width: 100%;
     padding-left: 1em;
+    @include desktopmenu {
+      font-size: 3em;
+      justify-content: center;
+    }
+    @include grandecran {
+      justify-content: flex-start;
+      padding-left: 1.4em;
+    }
     &--desserts {
       padding-top: 2.7em;
+      @include grandecran {
+        padding-top: 1.7em;
+      }
     }
   }
   .options {
@@ -56,27 +89,43 @@ main {
     align-items: center;
     list-style: none;
     padding-top: 1.8em;
+    @include desktopmenu {
+      gap: 5em;
+    }
     &__option {
       @include options;
+      @include desktopmenu {
+        font-size: 2.5em;
+        height: auto;
+        padding: 4px 0 4px 8px;
+      }
     }
   }
 }
 
 .article {
   padding: 8px 14px 12px 10px;
-  /*padding: 12px 15px;*/
   letter-spacing: 0.01em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 9px;
+  @include desktopmenu {
+    padding: 0;
+  }
   &__heading {
     font-size: 1.1em;
     font-weight: 700;
+    @include grandecran {
+      font-size: 1em;
+    }
     &--detail {
       font-size: 0.9em;
       font-weight: 400;
       opacity: 0.8;
+      @include grandecran {
+        font-size: 0.7em;
+      }
     }
   }
   &__prix {
@@ -86,6 +135,15 @@ main {
     top: -28px;
     left: -2px;
     opacity: 0.7;
+    @include desktopmenu {
+      top: -44px;
+      left: -45px;
+    }
+    @include grandecran {
+      top: 2px;
+      left: 0;
+      align-self: flex-start;
+    }
   }
 }
 

@@ -54,10 +54,16 @@
     align-items: center;
     gap: 26px;
     margin-top: 34px;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
     &__step {
       font-size: 1.6em;
       font-weight: 700;
-      height: 72px;
+      padding: 21px 1px;
       cursor: pointer;
       border: 1px solid #f2f2f2;
       border-radius: 21px;
@@ -65,9 +71,11 @@
       background-color: #f6f6f6;
       counter-increment: counter-steps;
       width: 90.5%;
+      max-width: 400px;
       display: flex;
       align-items: center;
       gap: 23px;
+      @include desktop;
       &::before {
         content: counter(counter-steps);
         color: #fff;
@@ -97,40 +105,43 @@
     font-size: 2.4em;
     padding-right: 8.875em;
     padding-bottom: 0.9em;
+    @include desktopresto;
+  }
+}
+
+.card {
+  border: 1px solid #f2f2f2;
+  border-bottom-left-radius: 21px;
+  border-bottom-right-radius: 21px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  border-radius: 15px;
+
+  &__image {
+    width: 100%;
+    @include images;
+    @include desktopresto;
+  }
+  .card__description {
+    text-decoration: none;
+
+    padding: 12px 14px;
+    font-size: 1.6em;
+    height: 74px;
+    letter-spacing: 0.01em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
   }
 
-  .card {
-    border: 1px solid #f2f2f2;
-    border-bottom-left-radius: 21px;
-    border-bottom-right-radius: 21px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.04);
-    width: 100%;
-    border-radius: 15px;
-
-    &__image {
-      width: auto;
-      @include images;
-    }
-    .card__description {
-      text-decoration: none;
-
-      padding: 12px 14px;
-      font-size: 1.6em;
-      height: 74px;
-      letter-spacing: 0.01em;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 2px;
-    }
-
-    .card__iconheart {
-      align-self: flex-end;
-      font-size: 24px;
-      position: relative;
-      top: -41px;
-      left: -10px;
-    }
+  .card__iconheart {
+    align-self: flex-end;
+    font-size: 24px;
+    position: relative;
+    top: -41px;
+    left: -10px;
+    opacity: 0.6;
   }
 }

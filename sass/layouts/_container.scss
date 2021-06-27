@@ -3,8 +3,11 @@
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  @include desktop;
+
   &--link {
     text-decoration: none;
     color: black;
+    @include desktopresto;
   }
 }

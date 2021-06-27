@@ -1,8 +1,19 @@
-/* &--menu {
-      width: 90%;
-      font-size: 2.9em;
-    }*/
-/* header la palette*/
+/*header accueil*/
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  &__logo {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.433em;
+  }
+}
+
+/* headerpages, la palette comme model*/
 .headerpages {
   &__menu {
     width: 100%;
@@ -19,11 +30,17 @@
     text-align: center;
     margin-top: 0.433em;
     padding-right: 2em;
+    @include desktopmenu {
+      font-size: 4em;
+    }
   }
 }
 .return__accueil {
   text-decoration: none;
   color: black;
+  @include desktopmenu {
+    font-size: 2em;
+  }
   &--icon {
     font-size: 1.9em;
     padding-top: 0.6em;

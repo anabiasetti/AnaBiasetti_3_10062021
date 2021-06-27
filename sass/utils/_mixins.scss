@@ -1,3 +1,40 @@
+$breakpoints: (
+  desktop: 599px,
+  grandecran: 900px,
+);
+$card: (
+  width: 457px,
+  height: 250px,
+);
+
+$heading: (
+  padding: 0 0 1em,
+);
+
+@mixin desktop {
+  @media all and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+@mixin desktopresto {
+  @media all and (min-width: map-get($breakpoints, desktop)) {
+    width: map-get($card, width);
+    padding: map-get($heading, padding);
+  }
+}
+
+@mixin desktopmenu {
+  @media all and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin grandecran {
+  @media all and(min-width: map-get($breakpoints, grandecran)) {
+    @content;
+  }
+}
+
 @mixin border($colour: $colour-secondary) {
   border: 0.1rem solid $colour;
 }
@@ -22,6 +59,7 @@
 @mixin images {
   height: 173px;
   width: 337px;
+  max-width: 456px; /* 17 x 15px (15px = 1% du max-width du body)*/
   object-fit: cover;
   border-radius: 15px 15px 0 0;
   object-position: 0 68%;
@@ -37,4 +75,9 @@
   border-radius: 21px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.01);
   background-color: white;
+}
+@mixin desktopfooter {
+  @media all and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
 }

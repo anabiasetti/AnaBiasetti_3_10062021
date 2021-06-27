@@ -1,3 +1,12 @@
+/*$font-size: (
+  logo: 1.9em,
+);
+.logo {
+  font-size: map-get($font-size, logo);
+  @include desktopfooter {
+    font-size: map-get($font-size, logo) * 0.4;
+  }
+}*/
 .footer {
   background-color: #353535;
   color: white;
@@ -5,6 +14,10 @@
   /*justify-content: center;media query*/
   flex-wrap: wrap;
   padding-bottom: 30px;
+  @include desktopfooter {
+    justify-content: center;
+    text-align: center;
+  }
 
   &__logo {
     font-family: "Shrikhand", sans-serif;
@@ -12,6 +25,11 @@
     padding-top: 1em;
     margin-left: 1.2em;
     width: 100%;
+    @include desktopfooter {
+      justify-content: center;
+      text-align: center;
+      font-size: 2.9em;
+    }
     /*text-align: center;media query*/
   }
 
@@ -28,6 +46,9 @@
     flex-direction: column;
 
     justify-content: space-between;
+    @include desktopfooter {
+      font-size: 2.5em;
+    }
   }
   &__listlink--contact {
     text-decoration: none;

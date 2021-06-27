@@ -11,6 +11,10 @@
     margin: 42px auto;
     padding-bottom: 18%;
     &--command {
+      @include desktopmenu {
+        padding: 21px 54px;
+        font-size: 3.2em;
+      }
       padding: 0.9em 2.8em;
       @include btn;
     }
