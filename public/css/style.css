@@ -219,6 +219,16 @@ button {
   align-items: center;
   gap: 18px;
 }
+@media all and (min-width: 900px) {
+  .restocards__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 36px;
+  }
+}
 .restocards__container--link {
   text-decoration: none;
   color: black;
@@ -459,17 +469,17 @@ main {
 .about__heading {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 2.4em;
+  font-size: 2.7em;
   text-align: center;
   margin-left: 18px;
   margin-right: 34px;
 }
 .about__description {
   font-size: 1.8em;
+  font-weight: 100;
   text-align: center;
-  margin-left: 28px;
-  margin-right: 21px;
   margin-top: 11px;
+  padding-left: 0px;
 }
 .about .btn {
   padding: 0.9em 1.5em;
@@ -498,6 +508,11 @@ main {
   font-family: "Roboto";
   margin-left: 0.875em;
   font-size: 2.4em;
+}
+@media all and (min-width: 599px) {
+  .fonctionnement__heading {
+    text-align: center;
+  }
 }
 .fonctionnement .steps {
   list-style: none;
@@ -531,6 +546,14 @@ main {
   align-items: center;
   gap: 23px;
 }
+.fonctionnement .steps__step:hover {
+  background-color: #f5edff;
+}
+@media all and (min-width: 599px) {
+  .fonctionnement .steps__step {
+    padding: 51px 1px;
+  }
+}
 .fonctionnement .steps__step::before {
   content: counter(counter-steps);
   color: #fff;
@@ -543,6 +566,9 @@ main {
 }
 .fonctionnement .steps__icon {
   font-size: 1.3em;
+}
+.fonctionnement .steps__icon--active:hover {
+  color: #9356dc;
 }
 
 .restaurants {
@@ -561,8 +587,8 @@ main {
 }
 @media all and (min-width: 599px) {
   .restaurants__heading {
-    width: 457px;
-    padding: 0 0 1em;
+    text-align: center;
+    padding-right: 0;
   }
 }
 
@@ -588,6 +614,16 @@ main {
   .card__image {
     width: 457px;
     padding: 0 0 1em;
+  }
+}
+@media all and (min-width: 599px) {
+  .card__image {
+    height: 250px;
+  }
+}
+@media all and (min-width: 900px) {
+  .card__image {
+    height: 250px;
   }
 }
 .card .card__description {
