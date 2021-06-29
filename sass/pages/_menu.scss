@@ -44,7 +44,7 @@ main {
 }
 /*section class="selection"*/
 
-.selection {
+.selections {
   @include desktop {
     display: flex;
   }
@@ -53,11 +53,11 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  &__choix {
-    padding: 4.7em 2em 6em;
+  &__selection {
+    padding: 4em 0em 0em 0.9em;
     max-width: 100%;
     @include grandecran {
-      max-widt: 30%;
+      max-width: 30%;
       margin: auto;
     }
   }
@@ -69,72 +69,67 @@ main {
     font-weight: 400;
     padding-top: 1.65em;
     width: 100%;
-    padding-left: 1em;
-    &--desserts {
-      padding-top: 2.7em;
-      @include grandecran {
-        padding-top: 1.7em;
-      }
-    }
-  }
-
-  &__options {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 2em;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-    list-style: none;
-    padding-top: 1.8em;
-    @include desktopmenu {
-      gap: 5em;
-    }
-    &--option {
-      @include options;
-      @include desktopmenu {
-        height: auto;
-        padding: 4px 0 4px 8px;
-      }
-    }
+    padding-left: 1.1em;
   }
 }
-
-.selection__article {
-  padding: 8px 14px 12px 10px;
-  letter-spacing: 0.01em;
+.options {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 9px;
+  justify-content: space-around;
+  gap: 2em;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  list-style: none;
+  padding-top: 1.8em;
   @include desktopmenu {
-    padding: 0;
+    gap: 5em;
   }
-}
-.selection__article__heading {
-  font-size: 1em;
-  font-weight: 700;
-  &--detail {
+  &__option {
+    padding: 8px 14px 12px 10px;
+    letter-spacing: 0.01em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 9px;
+    font-size: 1.6em;
+    font-weight: 700;
+    height: 72px;
+    width: 92%;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+    border-radius: 21px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.01);
+    background-color: white;
+    @include desktopmenu {
+      height: auto;
+      padding: 4px 0 4px 8px;
+    }
+  }
+  &__heading {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  &__detail {
     font-size: 0.9em;
     font-weight: 400;
     opacity: 0.8;
   }
-}
-.selection__article--prix {
-  align-self: flex-end;
-  font-size: 1em;
-  position: relative;
-  top: -28px;
-  left: -2px;
-  opacity: 0.7;
-  @include desktopmenu {
-    top: -44px;
-    left: -45px;
-  }
-  @include grandecran {
-    top: 2px;
-    left: 0;
-    align-self: flex-start;
+  &__price {
+    align-self: flex-end;
+    font-size: 1em;
+    position: relative;
+    top: -28px;
+    left: -2px;
+    opacity: 0.7;
+    @include desktopmenu {
+      top: -44px;
+      left: -45px;
+    }
+    @include grandecran {
+      top: 2px;
+      left: 0;
+      align-self: flex-start;
+    }
   }
 }

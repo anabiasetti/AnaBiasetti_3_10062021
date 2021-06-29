@@ -273,45 +273,38 @@ main {
 
 /*section class="selection"*/
 @media all and (min-width: 599px) {
-  .selection {
+  .selections {
     display: flex;
   }
 }
 @media all and (min-width: 900px) {
-  .selection {
+  .selections {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 }
-.selection__choix {
-  padding: 4.7em 2em 6em;
+.selections__selection {
+  padding: 4em 0em 0em 0.9em;
   max-width: 100%;
 }
 @media all and (min-width: 900px) {
-  .selection__choix {
-    max-widt: 30%;
+  .selections__selection {
+    max-width: 30%;
     margin: auto;
   }
 }
-.selection__heading {
+.selections__heading {
   display: flex;
   align-content: flex-start;
   font-size: 1.7em;
   font-weight: 400;
   padding-top: 1.65em;
   width: 100%;
-  padding-left: 1em;
+  padding-left: 1.1em;
 }
-.selection__heading--desserts {
-  padding-top: 2.7em;
-}
-@media all and (min-width: 900px) {
-  .selection__heading--desserts {
-    padding-top: 1.7em;
-  }
-}
-.selection__options {
+
+.options {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -323,11 +316,17 @@ main {
   padding-top: 1.8em;
 }
 @media all and (min-width: 599px) {
-  .selection__options {
+  .options {
     gap: 5em;
   }
 }
-.selection__options--option {
+.options__option {
+  padding: 8px 14px 12px 10px;
+  letter-spacing: 0.01em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 9px;
   font-size: 1.6em;
   font-weight: 700;
   height: 72px;
@@ -339,37 +338,21 @@ main {
   background-color: white;
 }
 @media all and (min-width: 599px) {
-  .selection__options--option {
+  .options__option {
     height: auto;
     padding: 4px 0 4px 8px;
   }
 }
-
-.selection__article {
-  padding: 8px 14px 12px 10px;
-  letter-spacing: 0.01em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 9px;
-}
-@media all and (min-width: 599px) {
-  .selection__article {
-    padding: 0;
-  }
-}
-
-.selection__article__heading {
+.options__heading {
   font-size: 1em;
   font-weight: 700;
 }
-.selection__article__heading--detail {
+.options__detail {
   font-size: 0.9em;
   font-weight: 400;
   opacity: 0.8;
 }
-
-.selection__article--prix {
+.options__price {
   align-self: flex-end;
   font-size: 1em;
   position: relative;
@@ -378,13 +361,13 @@ main {
   opacity: 0.7;
 }
 @media all and (min-width: 599px) {
-  .selection__article--prix {
+  .options__price {
     top: -44px;
     left: -45px;
   }
 }
 @media all and (min-width: 900px) {
-  .selection__article--prix {
+  .options__price {
     top: 2px;
     left: 0;
     align-self: flex-start;
