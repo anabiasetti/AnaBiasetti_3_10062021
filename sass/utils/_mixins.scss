@@ -43,7 +43,7 @@ $heading: (
   background: linear-gradient(to top, $colour-primary 0%, $colour-secondary 100%);
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: calc(1.2em + 0.33vw);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

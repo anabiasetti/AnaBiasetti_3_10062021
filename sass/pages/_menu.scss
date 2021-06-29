@@ -35,27 +35,33 @@
     font-size: 2.6em;
     text-align: center;
     @include desktopmenu {
-      font-size: 3.6em;
+      font-size: 3em;
     }
   }
 }
 main {
   background-color: #f6f6f6;
 }
-/*section class="choix"*/
+/*section class="selection"*/
 
-/*.selection {
+.selection {
+  @include desktop {
+    display: flex;
+  }
   @include grandecran {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
   }
-}*/
-
-.choix {
-  @include grandecran {
-    margin: auto;
+  &__choix {
+    padding: 4.7em 2em 6em;
+    max-width: 100%;
+    @include grandecran {
+      max-widt: 30%;
+      margin: auto;
+    }
   }
+
   &__heading {
     display: flex;
     align-content: flex-start;
@@ -64,14 +70,6 @@ main {
     padding-top: 1.65em;
     width: 100%;
     padding-left: 1em;
-    @include desktopmenu {
-      font-size: 3em;
-      justify-content: center;
-    }
-    @include grandecran {
-      justify-content: flex-start;
-      padding-left: 1.4em;
-    }
     &--desserts {
       padding-top: 2.7em;
       @include grandecran {
@@ -79,7 +77,8 @@ main {
       }
     }
   }
-  .options {
+
+  &__options {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -92,10 +91,9 @@ main {
     @include desktopmenu {
       gap: 5em;
     }
-    &__option {
+    &--option {
       @include options;
       @include desktopmenu {
-        font-size: 2.5em;
         height: auto;
         padding: 4px 0 4px 8px;
       }
@@ -103,7 +101,7 @@ main {
   }
 }
 
-.article {
+.selection__article {
   padding: 8px 14px 12px 10px;
   letter-spacing: 0.01em;
   display: flex;
@@ -113,40 +111,30 @@ main {
   @include desktopmenu {
     padding: 0;
   }
-  &__heading {
-    font-size: 1.1em;
-    font-weight: 700;
-    @include grandecran {
-      font-size: 1em;
-    }
-    &--detail {
-      font-size: 0.9em;
-      font-weight: 400;
-      opacity: 0.8;
-      @include grandecran {
-        font-size: 0.7em;
-      }
-    }
-  }
-  &__prix {
-    align-self: flex-end;
-    font-size: 1em;
-    position: relative;
-    top: -28px;
-    left: -2px;
-    opacity: 0.7;
-    @include desktopmenu {
-      top: -44px;
-      left: -45px;
-    }
-    @include grandecran {
-      top: 2px;
-      left: 0;
-      align-self: flex-start;
-    }
+}
+.selection__article__heading {
+  font-size: 1em;
+  font-weight: 700;
+  &--detail {
+    font-size: 0.9em;
+    font-weight: 400;
+    opacity: 0.8;
   }
 }
-
-.footer__menu {
-  margin-top: -41px;
+.selection__article--prix {
+  align-self: flex-end;
+  font-size: 1em;
+  position: relative;
+  top: -28px;
+  left: -2px;
+  opacity: 0.7;
+  @include desktopmenu {
+    top: -44px;
+    left: -45px;
+  }
+  @include grandecran {
+    top: 2px;
+    left: 0;
+    align-self: flex-start;
+  }
 }

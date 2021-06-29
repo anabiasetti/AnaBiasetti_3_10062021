@@ -43,7 +43,7 @@ button {
 .button__menu {
   flex-direction: row;
   justify-content: center;
-  margin: 42px auto;
+  margin: 42px auto 0;
   padding-bottom: 18%;
 }
 .button__menu--command {
@@ -51,7 +51,7 @@ button {
   background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: calc(1.2em + 0.33vw);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -59,22 +59,15 @@ button {
   cursor: pointer;
   border-radius: 55px;
   cursor: pointer;
-}
-@media all and (min-width: 599px) {
-  .button__menu--command {
-    padding: 21px 54px;
-    font-size: 3.2em;
-  }
 }
 .button__menu--command:hover {
   background: linear-gradient(to top, #ae80e5 0%, #fface8 100%);
 }
-
-.btn {
+.button__link {
   background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: calc(1.2em + 0.33vw);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -83,7 +76,7 @@ button {
   border-radius: 55px;
   cursor: pointer;
 }
-.btn:hover {
+.button__link:hover {
   background: linear-gradient(to top, #ae80e5 0%, #fface8 100%);
 }
 
@@ -101,40 +94,14 @@ button {
   text-align: center;
   margin-top: 0.433em;
 }
-
-/* headerpages, la palette comme model*/
-.headerpages__menu {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1.5em;
+.header__navrestaurant {
+  position: absolute;
 }
-.headerpages__logo {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 3em;
-  width: 100%;
-  text-align: center;
-  margin-top: 0.433em;
-  padding-right: 2em;
-}
-@media all and (min-width: 599px) {
-  .headerpages__logo {
-    font-size: 4em;
-  }
-}
-
-.return__accueil {
+.header__return {
   text-decoration: none;
   color: black;
 }
-@media all and (min-width: 599px) {
-  .return__accueil {
-    font-size: 2em;
-  }
-}
-.return__accueil--icon {
+.header__return--icon {
   font-size: 1.9em;
   padding-top: 0.6em;
   padding-left: 1.26em;
@@ -163,7 +130,6 @@ button {
   background-color: #353535;
   color: white;
   display: flex;
-  /*justify-content: center;media query*/
   flex-wrap: wrap;
   padding-bottom: 30px;
 }
@@ -179,13 +145,11 @@ button {
   padding-top: 1em;
   margin-left: 1.2em;
   width: 100%;
-  /*text-align: center;media query*/
 }
 @media all and (min-width: 599px) {
   .footer__logo {
     justify-content: center;
     text-align: center;
-    font-size: 2.9em;
   }
 }
 .footer__links {
@@ -199,11 +163,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-@media all and (min-width: 599px) {
-  .footer__links {
-    font-size: 2.5em;
-  }
 }
 .footer__listlink--contact {
   text-decoration: none;
@@ -304,7 +263,7 @@ button {
 }
 @media all and (min-width: 599px) {
   .presentation__titre {
-    font-size: 3.6em;
+    font-size: 3em;
   }
 }
 
@@ -312,20 +271,30 @@ main {
   background-color: #f6f6f6;
 }
 
-/*section class="choix"*/
-/*.selection {
-  @include grandecran {
+/*section class="selection"*/
+@media all and (min-width: 599px) {
+  .selection {
     display: flex;
-    flex-direction: column;
+  }
+}
+@media all and (min-width: 900px) {
+  .selection {
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
   }
-}*/
+}
+.selection__choix {
+  padding: 4.7em 2em 6em;
+  max-width: 100%;
+}
 @media all and (min-width: 900px) {
-  .choix {
+  .selection__choix {
+    max-widt: 30%;
     margin: auto;
   }
 }
-.choix__heading {
+.selection__heading {
   display: flex;
   align-content: flex-start;
   font-size: 1.7em;
@@ -334,27 +303,15 @@ main {
   width: 100%;
   padding-left: 1em;
 }
-@media all and (min-width: 599px) {
-  .choix__heading {
-    font-size: 3em;
-    justify-content: center;
-  }
-}
-@media all and (min-width: 900px) {
-  .choix__heading {
-    justify-content: flex-start;
-    padding-left: 1.4em;
-  }
-}
-.choix__heading--desserts {
+.selection__heading--desserts {
   padding-top: 2.7em;
 }
 @media all and (min-width: 900px) {
-  .choix__heading--desserts {
+  .selection__heading--desserts {
     padding-top: 1.7em;
   }
 }
-.choix .options {
+.selection__options {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -366,11 +323,11 @@ main {
   padding-top: 1.8em;
 }
 @media all and (min-width: 599px) {
-  .choix .options {
+  .selection__options {
     gap: 5em;
   }
 }
-.choix .options__option {
+.selection__options--option {
   font-size: 1.6em;
   font-weight: 700;
   height: 72px;
@@ -382,14 +339,13 @@ main {
   background-color: white;
 }
 @media all and (min-width: 599px) {
-  .choix .options__option {
-    font-size: 2.5em;
+  .selection__options--option {
     height: auto;
     padding: 4px 0 4px 8px;
   }
 }
 
-.article {
+.selection__article {
   padding: 8px 14px 12px 10px;
   letter-spacing: 0.01em;
   display: flex;
@@ -398,30 +354,22 @@ main {
   gap: 9px;
 }
 @media all and (min-width: 599px) {
-  .article {
+  .selection__article {
     padding: 0;
   }
 }
-.article__heading {
-  font-size: 1.1em;
+
+.selection__article__heading {
+  font-size: 1em;
   font-weight: 700;
 }
-@media all and (min-width: 900px) {
-  .article__heading {
-    font-size: 1em;
-  }
-}
-.article__heading--detail {
+.selection__article__heading--detail {
   font-size: 0.9em;
   font-weight: 400;
   opacity: 0.8;
 }
-@media all and (min-width: 900px) {
-  .article__heading--detail {
-    font-size: 0.7em;
-  }
-}
-.article__prix {
+
+.selection__article--prix {
   align-self: flex-end;
   font-size: 1em;
   position: relative;
@@ -430,35 +378,17 @@ main {
   opacity: 0.7;
 }
 @media all and (min-width: 599px) {
-  .article__prix {
+  .selection__article--prix {
     top: -44px;
     left: -45px;
   }
 }
 @media all and (min-width: 900px) {
-  .article__prix {
+  .selection__article--prix {
     top: 2px;
     left: 0;
     align-self: flex-start;
   }
-}
-
-.footer__menu {
-  margin-top: -41px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.header__logo {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 3em;
-  width: 100%;
-  text-align: center;
-  margin-top: 0.433em;
 }
 
 .about {
@@ -481,12 +411,12 @@ main {
   margin-top: 11px;
   padding-left: 0px;
 }
-.about .btn {
+.about .button__link {
   padding: 0.9em 1.5em;
   background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: calc(1.2em + 0.33vw);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -495,14 +425,13 @@ main {
   border-radius: 55px;
   cursor: pointer;
 }
-.about .btn:hover {
+.about .button__link:hover {
   background: linear-gradient(to top, #ae80e5 0%, #fface8 100%);
 }
 
 .fonctionnement {
   background-color: white;
-  padding-top: 4.7em;
-  padding-bottom: 6em;
+  padding: 4.7em 2em 6em;
 }
 .fonctionnement__heading {
   font-family: "Roboto";
@@ -540,19 +469,14 @@ main {
   box-shadow: 2px 2px 2px 2px rgba(242, 242, 242, 0.9);
   background-color: #f6f6f6;
   counter-increment: counter-steps;
-  width: 90.5%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 340px;
   display: flex;
   align-items: center;
   gap: 23px;
 }
 .fonctionnement .steps__step:hover {
   background-color: #f5edff;
-}
-@media all and (min-width: 599px) {
-  .fonctionnement .steps__step {
-    padding: 51px 1px;
-  }
 }
 .fonctionnement .steps__step::before {
   content: counter(counter-steps);
@@ -599,6 +523,7 @@ main {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.04);
   width: 100%;
   border-radius: 15px;
+  position: relative;
 }
 .card__image {
   width: 100%;
@@ -626,6 +551,17 @@ main {
     height: 250px;
   }
 }
+.card__new {
+  font-size: 1.4em;
+  background-color: green;
+  color: white;
+  font-weight: 700;
+  padding: 0.4em;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 .card .card__description {
   text-decoration: none;
   padding: 12px 14px;
@@ -640,10 +576,10 @@ main {
 .card .card__iconheart {
   align-self: flex-end;
   font-size: 24px;
+  font-weight: 100;
   position: relative;
   top: -41px;
   left: -10px;
-  opacity: 0.6;
 }
 
 /*@import "./pages/project";*/

@@ -13,10 +13,11 @@
     <title>La palette du goût</title>
   </head>
   <body>
-    <header class="headerpages">
-      <nav class="headerpages__menu">
-        <a class="return__accueil" href="index.html"><i class="fas fa-arrow-left return__accueil--icon"></i></a>
-        <h1 class="headerpages__logo">ohmyfood</h1>
+    <!--Header: logo qui ressemble un h1-->
+    <header class="header">
+      <h1 class="header__logo">ohmyfood</h1>
+      <nav class="header__navrestaurant">
+        <a class="header__return" href="index.html"><i class="fas fa-arrow-left header__return--icon"></i></a>
       </nav>
     </header>
     <main>
@@ -31,93 +32,93 @@
           <i class="far fa-heart presentation__heading--iconheart"></i>
         </div>
       </section>
-      
-      <section class="choix choixentry">
-        <h3 class="choix__heading choix__heading--entry">ENTRÉES</h3>
-        <ul class="options">
-          <li class="options__option">
-            <article class="article">
-            <h4 class="article__heading">Fricassée d'escargot</h4>
-            <p class="article__heading--detail"> Au piment d'Espelette</p>
-            <p class="article__prix"> 25€</p>
-          </article>
-          </li>
-          <li class="options__option">
-            <article class="article">
-              <h4 class="article__heading">Foie gras de canard mi-cuit</h4>
-              <p class="article__heading--detail"> Et ses copeaux de truffe noire</p> 
-              <p class="article__prix">35€</p>
-            </article>
-          </li>
-          <li class="options__option">
-            <article class="article">
-              <h4 class="article__heading"> Oeuf au plat</h4>
-              <p class="article__heading--detail"> Assaisonné à la truffe sur lit de caviar</p> 
-              <p class="article__prix">20€</p>
-            </article>
+      <section class="selection">
+        <section class="selection__choix">
+          <h3 class="selection__heading--entry">ENTRÉES</h3>
+          <ul class="selection__options">
+            <li class="selection__options--option">
+              <article class="selection__article">
+                <h4 class="selection__article__heading">Fricassée d'escargot</h4>
+                <p class="selection__article__heading--detail">Au piment d'Espelette</p>
+                <p class="selection__article--prix">25€</p>
+              </article>
+            </li>
+            <li class="selection__options--option">
+              <article class="selection__article">
+                <h4 class="selection__article__heading">Foie gras de canard mi-cuit</h4>
+                <p class="selection__article__heading--detail">Et ses copeaux de truffe noire</p>
+                <p class="selection__article--prix">35€</p>
+              </article>
+            </li>
+            <li class="selection__options--option">
+              <article class="selection__article">
+                <h4 class="article__heading">Oeuf au plat</h4>
+                <p class="article__heading--detail">Assaisonné à la truffe sur lit de caviar</p>
+                <p class="selection__article--prix">20€</p>
+              </article>
+            </li>
+          </ul>
+        </section>
 
+        <section class="selection__choix">
+          <h3 class="selection__heading--plats">PLATS</h3>
+          <ul class="selection__options">
+            <li class="selection__options--option">
+              <article class="selection__article">
+                <h4 class="selection__article__heading">Filet de boeuf aux herbes</h4>
+                <p class="selection__article__heading--detail">Accompagné de sa ribambelle de légumes</p>
+                <p class="selection__article--prix">40€</p>
+              </article>
             </li>
-        </ul>
-      </section>
-    
-      <section class="choix choixplats">
-        <h3 class="choix__heading choix__heading--plats">PLATS</h3>
-        <ul class="options">
-          <li class="options__option">
-            <article class="article"> 
-              <h4 class="article__heading"> Filet de boeuf aux herbes</h4>
-              <p class="article__heading--detail"> Accompagné de sa ribambelle de légumes</p> 
-              <p class="article__prix">40€</p>
-            </article>
-             </li>
-          <li class="options__option">
-            <article class="article">
-              <h4 class="article__heading">Parmentier de queue de boeuf </h4>
-              <p class="article__heading--detail">À la truffe noire sur sa purée de panais</p> 
-              <p class="article__prix">35€</p>
-            </article>
+            <li class="selection__options--option">
+              <article class="selection__article">
+                <h4 class="selection__article__heading">Parmentier de queue de boeuf</h4>
+                <p class="selection__article__heading--detail">À la truffe noire sur sa purée de panais</p>
+                <p class="article__prix"></p>
+              </article>
             </li>
-          <li class="options__option">
-            <article class="article">
-              <h4 class="article__heading">Filet de turbot</h4>
-              <p class="article__heading--detail">Aux agrumes</p> 
-              <p class="article__prix">44€</p>
-            </article>
+            <li class="selection__options--option">
+              <article class="selection__article">
+                <h4 class="selection__article__heading">Filet de turbot</h4>
+                <p class="selection__article__heading--detail">Assaisonné à la truffe sur lit de caviar</p>
+                <p class="selection__article--prix">20€</p>
+              </article>
             </li>
-        </ul>
+          </ul>
+        </section>
+
+        <section class="selection__choix">
+          <h3 class="selection__heading--desserts">DESSERTS</h3>
+          <ul class="selection__options">
+            <li class="selection__options--option">
+              <article class="selection__article">
+                <h4 class="selection__article__heading">Paris-Brest</h4>
+                <p class="selection__article__heading--detail">Revisité</p>
+                <p class="selection__article--prix"></p>
+              </article>
+            </li>
+            <li class="selection__options--option">
+              <article class="selection__article">
+                <h4 class="seelction__article__heading">Macaron au chocolat d'exception</h4>
+                <p class="selection__article__heading--detail">Et glace à la vanille de Madagascar</p>
+                <p class="selection__article--prix">22€</p>
+              </article>
+            </li>
+            <li class="selection__options--option">
+              <article class="selection__article">
+                <h4 class="selection__article__heading">Mousse au chocolat</h4>
+                <p class="selection__article__heading--detail">Au piment d'Espelette et à la truffe noire</p>
+                <p class="selection__article--prix">23€</p>
+              </article>
+            </li>
+          </ul>
+        </section>
       </section>
-      <section class="choix choixdesserts">
-        <h3 class="choix__heading choix__heading--desserts">DESSERTS</h3>
-        <ul class="options">
-          <li class="options__option">
-            <article class="article">
-          </h4 class="article__heading">Paris-Brest</h4> 
-            <p class="article__heading--detail">Revisité </p>
-            <p class="article__prix">18€</p>
-          </article>
-        </li>
-          <li class="options__option">
-            <article class="article">
-            </h4 class="article__heading">Macaron au chocolat d'exception </h4> 
-              <p class="article__heading--detail">Et glace à la vanille de Madagascar</p>
-              <p class="article__prix">22€</p>
-            </article>
-             </li>
-          <li class="options__option">
-            <article class="article">
-            </h4 class="article__heading">Mousse au chocolat</h4> 
-              <p class="article__heading--detail">Au piment d'Espelette et à la truffe noire</p>
-              <p class="article__prix">23€</p>
-            </article>
-              </li>
-        </ul>
-      </section>
-   
       <button class="button button__menu">
         <a href="#" class="button__menu--command">Commander</a>
       </button>
     </main>
-    <footer class="footer footer__menu">
+    <footer class="footer">
       <h2 class="footer__logo">ohmyfood</h2>
       <ul class="footer__links">
         <li class="footer__list">

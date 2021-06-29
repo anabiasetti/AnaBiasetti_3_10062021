@@ -11,7 +11,6 @@
   background-color: #353535;
   color: white;
   display: flex;
-  /*justify-content: center;media query*/
   flex-wrap: wrap;
   padding-bottom: 30px;
   @include desktopfooter {
@@ -28,9 +27,7 @@
     @include desktopfooter {
       justify-content: center;
       text-align: center;
-      font-size: 2.9em;
     }
-    /*text-align: center;media query*/
   }
 
   &__links {
@@ -42,13 +39,8 @@
     text-decoration: none;
     color: white;
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
-    @include desktopfooter {
-      font-size: 2.5em;
-    }
   }
   &__listlink--contact {
     text-decoration: none;
