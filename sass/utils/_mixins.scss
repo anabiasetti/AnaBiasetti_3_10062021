@@ -1,6 +1,7 @@
 $breakpoints: (
   desktop: 599px,
   grandecran: 900px,
+  desktopselection: 737px,
 );
 $card: (
   width: 457px,
@@ -23,20 +24,15 @@ $heading: (
   }
 }
 
-@mixin desktopmenu {
-  @media all and (min-width: map-get($breakpoints, desktop)) {
-    @content;
-  }
-}
-
 @mixin grandecran {
   @media all and(min-width: map-get($breakpoints, grandecran)) {
     @content;
   }
 }
-
-@mixin border($colour: $colour-secondary) {
-  border: 0.1rem solid $colour;
+@mixin desktopselection {
+  @media all and(min-width: map-get($breakpoints, desktopselection)) {
+    @content;
+  }
 }
 
 @mixin btn {
@@ -54,15 +50,6 @@ $heading: (
   &:hover {
     background: linear-gradient(to top, lighten($colour-primary, 10%) 0%, lighten($colour-secondary, 10%) 100%);
   }
-}
-
-@mixin images {
-  height: 173px;
-  width: 337px;
-  max-width: 456px; /* 17 x 15px (15px = 1% du max-width du body)*/
-  object-fit: cover;
-  border-radius: 15px 15px 0 0;
-  object-position: 0 68%;
 }
 
 @mixin desktopfooter {
