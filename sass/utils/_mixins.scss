@@ -34,6 +34,9 @@ $heading: (
     @content;
   }
 }
+@mixin bgcolour {
+  background: linear-gradient(to top, $colour-primary 0%, $colour-secondary 100%);
+}
 
 @mixin btn {
   background: linear-gradient(to top, $colour-primary 0%, $colour-secondary 100%);
@@ -47,8 +50,26 @@ $heading: (
   cursor: pointer;
   border-radius: 55px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
   &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &::after {
+    border-radius: 55px;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: linear-gradient(to top, lighten($colour-primary, 10%) 0%, lighten($colour-secondary, 10%) 100%);
+    box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
   }
 }
 
