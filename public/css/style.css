@@ -399,19 +399,39 @@ main {
 }
 .options__option--confirmation {
   position: absolute;
-  right: -300px;
+  right: -100px;
   background-color: #99e2d0;
   transition: 1s;
   height: 72px;
   width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.options__option--confirmation--circle {
+  color: #99e2d0;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 4px 6px;
+  font-size: 0.9em;
+  display: inline-block;
 }
 .options__option:hover .options__option--confirmation {
   transition: 1s;
-  transform: translateX(-300px);
+  transform: translateX(-100px);
 }
-.options__option:hover .options__option--confirmation--icon {
+.options__option:hover .options__option--confirmation--circle {
   transition: 1250ms;
   transform: rotate(360deg);
+}
+.options__option:hover .options__detail {
+  transition: 1s;
+  width: calc(100% - 90px);
+}
+.options__option:hover .options__heading {
+  transition: 1s;
+  width: calc(100% - 90px);
 }
 .options__heading {
   font-size: 1em;
@@ -419,6 +439,8 @@ main {
   white-space: nowrap;
   margin: 14px 0 0 2px;
   letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .options__description {
   font-size: 0.9em;
@@ -431,6 +453,7 @@ main {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  transition: 1s;
 }
 .options__price {
   margin: -2px 10px 0 0;
