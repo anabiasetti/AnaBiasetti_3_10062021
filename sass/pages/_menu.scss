@@ -117,21 +117,44 @@ main {
     transform: translateY(1em);
     animation: cardslidein 1s calc(var(--nth-child) * 300ms) forwards;
     overflow: hidden;
+    // .options__option--confirmation
     &--confirmation {
       position: absolute;
-      right: -300px;
+      right: -100px;
       background-color: $colour-tertiary;
       transition: 1s;
       height: 72px;
       width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--circle {
+        color: $colour-tertiary;
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        padding: 4px 6px;
+        font-size: 0.9em;
+        display: inline-block;
+      }
     }
+    // Animations
+    // .options__option:hover .options__option--confirmation
     &:hover &--confirmation {
       transition: 1s;
-      transform: translateX(-300px);
-      &--icon {
+      transform: translateX(-100px);
+      &--circle {
         transition: 1250ms;
         transform: rotate(360deg);
       }
+    }
+    &:hover .options__detail {
+      transition: 1s;
+      width: calc(100% - 90px);
+    }
+    &:hover .options__heading {
+      transition: 1s;
+      width: calc(100% - 90px);
     }
   }
   &__heading {
@@ -140,6 +163,8 @@ main {
     white-space: nowrap;
     margin: 14px 0 0 2px;
     letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__description {
     font-size: 0.9em;
@@ -152,6 +177,7 @@ main {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    transition: 1s;
   }
   &__price {
     margin: -2px 10px 0 0;
