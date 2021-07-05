@@ -162,5 +162,9 @@
     position: relative;
     top: -41px;
     left: -10px;
+    @include heart;
+    &:hover {
+      @include hearthover;
+    }
   }
 }

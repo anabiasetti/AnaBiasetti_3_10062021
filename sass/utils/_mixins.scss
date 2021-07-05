@@ -78,3 +78,19 @@ $heading: (
     @content;
   }
 }
+
+@mixin hearthover {
+  color: #fff;
+  font-weight: 600;
+  -webkit-background-clip: border-box;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-position: bottom;
+  animation: animationheart 2s backwards;
+}
+@mixin heart {
+  color: #000;
+  cursor: pointer;
+  transition: all 2s ease-in-out;
+}

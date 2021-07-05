@@ -30,3 +30,32 @@ body {
 :nth-child(3) {
   --nth-child: 3;
 }
+
+.spin::before {
+  animation: 1.5s linear spinner;
+  border: solid 5px $colour-primary;
+  border-bottom-color: $colour-secondary;
+  border-top-color: $colour-tertiary;
+  border-radius: 50%;
+  content: "";
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+  transition: opacity linear 0.1s;
+  animation-fill-mode: forwards;
+  animation-name: spin;
+}
+@keyframes spin {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
