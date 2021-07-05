@@ -86,11 +86,11 @@ $heading: (
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+
   background-position: bottom;
-  animation: animationheart 2s backwards;
+  animation: animationheart 125ms forwards;
 }
 @mixin heart {
-  color: #000;
   cursor: pointer;
-  transition: all 2s ease-in-out;
+  transition: all 125ms ease-in-out;
 }

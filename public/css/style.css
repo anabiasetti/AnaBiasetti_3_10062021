@@ -33,7 +33,7 @@ body {
 }
 
 .spin::before {
-  animation: 1.5s linear spinner;
+  animation: 1.5s linear spin;
   border: solid 5px #9356dc;
   border-bottom-color: #ff79da;
   border-top-color: #99e2d0;
@@ -59,6 +59,14 @@ body {
   100% {
     transform: translate3d(-50%, -50%, 0) rotate(360deg);
     opacity: 0;
+  }
+}
+@keyframes animationheart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 body {
@@ -323,9 +331,8 @@ button {
 }
 .presentation__heading--iconheart {
   font-size: 2.4em;
-  color: #000;
   cursor: pointer;
-  transition: all 2s ease-in-out;
+  transition: all 125ms ease-in-out;
 }
 .presentation__heading--iconheart:hover {
   color: #fff;
@@ -335,7 +342,7 @@ button {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-position: bottom;
-  animation: animationheart 2s backwards;
+  animation: animationheart 125ms forwards;
 }
 @media all and (min-width: 599px) {
   .presentation__heading--iconheart {
@@ -711,9 +718,8 @@ main {
   position: relative;
   top: -41px;
   left: -10px;
-  color: #000;
   cursor: pointer;
-  transition: all 2s ease-in-out;
+  transition: all 125ms ease-in-out;
 }
 .card .card__iconheart:hover {
   color: #fff;
@@ -723,7 +729,7 @@ main {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-position: bottom;
-  animation: animationheart 2s backwards;
+  animation: animationheart 125ms forwards;
 }
 
 /*@import "./pages/project";*/

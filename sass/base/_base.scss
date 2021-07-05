@@ -32,7 +32,7 @@ body {
 }
 
 .spin::before {
-  animation: 1.5s linear spinner;
+  animation: 1.5s linear spin;
   border: solid 5px $colour-primary;
   border-bottom-color: $colour-secondary;
   border-top-color: $colour-tertiary;
@@ -49,6 +49,7 @@ body {
   animation-fill-mode: forwards;
   animation-name: spin;
 }
+
 @keyframes spin {
   0% {
     transform: translate3d(-50%, -50%, 0) rotate(0deg);
@@ -57,5 +58,14 @@ body {
   100% {
     transform: translate3d(-50%, -50%, 0) rotate(360deg);
     opacity: 0;
+  }
+}
+//animations
+@keyframes animationheart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
