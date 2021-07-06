@@ -392,7 +392,7 @@ main {
 }
 
 /*section class="selection"*/
-@media all and (min-width: 737px) {
+@media all and (min-width: 599px) {
   .selections {
     display: flex;
     flex-wrap: wrap;
@@ -408,7 +408,7 @@ main {
   padding: 0em 0.9em 2em 0.9em;
   flex-grow: 0.5;
 }
-@media all and (min-width: 737px) {
+@media all and (min-width: 599px) {
   .selections__selection {
     width: 50%;
   }

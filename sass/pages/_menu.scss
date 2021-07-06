@@ -50,7 +50,7 @@ main {
 /*section class="selection"*/
 
 .selections {
-  @include desktopselection {
+  @include desktop {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -61,7 +61,7 @@ main {
   &__selection {
     padding: 0em 0.9em 2em 0.9em;
     flex-grow: 0.5;
-    @include desktopselection {
+    @include desktop {
       width: 50%;
     }
     @include grandecran {
