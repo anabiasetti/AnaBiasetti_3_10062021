@@ -149,7 +149,7 @@ main {
       transition: 1s;
       transform: translateX(-100px);
       &--circle {
-        transition: 1250ms;
+        transition: 1000ms;
         transform: rotate(360deg);
       }
     }
