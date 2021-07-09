@@ -31,7 +31,7 @@
       }
 
       @include desktop {
-        font-size: 3.5em;
+        font-size: 3.4em;
       }
     }
   }
@@ -44,10 +44,10 @@
     }
   }
 }
+
 main {
   background-color: #f6f6f6;
 }
-/*section class="selection"*/
 
 .selections {
   @include desktop {
@@ -109,7 +109,7 @@ main {
     gap: 9px;
     font-size: 1.6em;
     font-weight: 700;
-    height: 72px;
+    height: 60px;
     width: 92%;
     cursor: pointer;
     border: 1px solid #f2f2f2;
@@ -120,14 +120,22 @@ main {
     box-sizing: content-box;
     opacity: 0;
     transform: translateY(1em);
-    animation: cardslidein 1s calc(var(--nth-child) * 300ms) forwards;
+    &:nth-child(1) {
+      animation: cardslidein 1s 300ms forwards;
+    }
+    &:nth-child(2) {
+      animation: cardslidein 1s 600ms forwards;
+    }
+    &:nth-child(3) {
+      animation: cardslidein 1s 900ms forwards;
+    }
     overflow: hidden;
     // .options__option--confirmation
     &--confirmation {
       position: absolute;
       right: -100px;
       background-color: $colour-tertiary;
-      transition: 1s;
+      transition: 1000ms;
       height: 72px;
       width: 100px;
       display: flex;
@@ -146,19 +154,19 @@ main {
     // Animations
     // .options__option:hover .options__option--confirmation
     &:hover &--confirmation {
-      transition: 1s;
+      transition: 400ms;
       transform: translateX(-100px);
       &--circle {
-        transition: 1000ms;
+        transition: 500ms;
         transform: rotate(360deg);
       }
     }
     &:hover .options__detail {
-      transition: 1s;
+      transition: 400ms;
       width: calc(100% - 90px);
     }
     &:hover .options__heading {
-      transition: 1s;
+      transition: 400ms;
       width: calc(100% - 90px);
     }
   }

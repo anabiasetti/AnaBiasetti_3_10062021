@@ -1,7 +1,6 @@
 $breakpoints: (
   desktop: 599px,
   grandecran: 900px,
-  desktopselection: 737px,
 );
 $card: (
   width: 457px,
@@ -28,14 +27,6 @@ $heading: (
   @media all and(min-width: map-get($breakpoints, grandecran)) {
     @content;
   }
-}
-@mixin desktopselection {
-  @media all and(min-width: map-get($breakpoints, desktopselection)) {
-    @content;
-  }
-}
-@mixin bgcolour {
-  background: linear-gradient(to top, $colour-primary 0%, $colour-secondary 100%);
 }
 
 @mixin btn {
@@ -79,18 +70,21 @@ $heading: (
   }
 }
 
-@mixin hearthover {
-  color: #fff;
-  font-weight: 600;
-  background-clip: border-box;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  background-position: bottom;
-  animation: animationheart 125ms forwards;
-}
 @mixin heart {
-  cursor: pointer;
-  transition: all 125ms ease-in-out;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+  background-image: linear-gradient(0deg, #ff79da 0%, #9356dc 33%, transparent 50%);
+  transition: all 700ms ease-in-out;
+  background-size: 100% 200%;
+  background-position: top;
+  transform-origin: top;
+  -webkit-text-fill-color: transparent;
+}
+@mixin hearthover {
+  -webkit-text-stroke-color: transparent;
+  background-position: bottom;
+  padding: 1px;
 }

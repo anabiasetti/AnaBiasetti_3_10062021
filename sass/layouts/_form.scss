@@ -6,6 +6,7 @@
   gap: 2em;
   padding-left: 116px;
   margin-top: 16px;
+  overflow: hidden;
   & input {
     display: inline;
     font-size: 1.6em;
@@ -13,6 +14,7 @@
     color: black;
     border: none;
     background-color: #eaeaea;
+    width: 252px;
   }
   & input::placeholder {
     opacity: 1;

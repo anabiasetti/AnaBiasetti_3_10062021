@@ -1,7 +1,5 @@
 @import "./utils/variables";
-/*@import "./utils/functions";*/
 @import "./utils/mixins";
-/*@import "./utils/extensions";*/
 
 @import "./base/base";
 @import "./base/typography";
@@ -14,8 +12,6 @@
 @import "./layouts/container";
 @import "./layouts/form";
 @import "./layouts/loader";
-@import "./layouts/animations";
 
 @import "./pages/menu";
 @import "./pages/accueil";
-/*@import "./pages/project";*/

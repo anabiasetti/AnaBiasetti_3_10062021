@@ -1,5 +1,3 @@
-/*@import "./utils/functions";*/
-/*@import "./utils/extensions";*/
 *,
 *::after,
 *::before {
@@ -18,18 +16,6 @@ body {
   max-width: 1500px;
   height: 100%;
   margin: auto;
-}
-
-:nth-child(1) {
-  --nth-child: 1;
-}
-
-:nth-child(2) {
-  --nth-child: 2;
-}
-
-:nth-child(3) {
-  --nth-child: 3;
 }
 
 body {
@@ -162,15 +148,6 @@ button {
   font-size: 1.6em;
 }
 
-/*$font-size: (
-  logo: 1.9em,
-);
-.logo {
-  font-size: map-get($font-size, logo);
-  @include desktopfooter {
-    font-size: map-get($font-size, logo) * 0.4;
-  }
-}*/
 .footer {
   background-color: #353535;
   color: white;
@@ -209,7 +186,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
 }
-.footer__listlink--contact {
+.footer__listlink {
   text-decoration: none;
   color: white;
 }
@@ -252,6 +229,7 @@ button {
   gap: 2em;
   padding-left: 116px;
   margin-top: 16px;
+  overflow: hidden;
 }
 .form__accueil input {
   display: inline;
@@ -260,18 +238,19 @@ button {
   color: black;
   border: none;
   background-color: #eaeaea;
+  width: 252px;
 }
 .form__accueil input::placeholder {
   opacity: 1;
 }
 
-.spin__previous {
+.spin__container {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #fff;
-  animation: spinprevious 5s forwards;
-  animation-duration: 5s;
+  animation: spinprevious 3s forwards;
+  animation-duration: 3s;
   z-index: 9999;
 }
 
@@ -300,12 +279,12 @@ button {
   height: 200px;
   width: 200px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   z-index: 10000;
   transform: translate3d(-50%, -50%, 0);
   will-change: transform;
-  transition: opacity linear 0.1s;
+  transition: opacity linear 1s;
   animation-fill-mode: both;
   animation-name: spinner;
 }
@@ -318,14 +297,6 @@ button {
   100% {
     transform: translate3d(-50%, -50%, 0) rotate(360deg);
     opacity: 0;
-  }
-}
-@keyframes animationheart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 .presentation {
@@ -358,22 +329,26 @@ button {
 }
 .presentation__heading--iconheart {
   font-size: 2.4em;
-  cursor: pointer;
-  transition: all 125ms ease-in-out;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+  background-image: linear-gradient(0deg, #ff79da 0%, #9356dc 33%, transparent 50%);
+  transition: all 700ms ease-in-out;
+  background-size: 100% 200%;
+  background-position: top;
+  transform-origin: top;
+  -webkit-text-fill-color: transparent;
 }
 .presentation__heading--iconheart:hover {
-  color: #fff;
-  font-weight: 600;
-  background-clip: border-box;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-text-stroke-color: transparent;
   background-position: bottom;
-  animation: animationheart 125ms forwards;
+  padding: 1px;
 }
 @media all and (min-width: 599px) {
   .presentation__heading--iconheart {
-    font-size: 3.5em;
+    font-size: 3.4em;
   }
 }
 .presentation__titre {
@@ -391,7 +366,6 @@ main {
   background-color: #f6f6f6;
 }
 
-/*section class="selection"*/
 @media all and (min-width: 599px) {
   .selections {
     display: flex;
@@ -459,7 +433,7 @@ main {
   gap: 9px;
   font-size: 1.6em;
   font-weight: 700;
-  height: 72px;
+  height: 60px;
   width: 92%;
   cursor: pointer;
   border: 1px solid #f2f2f2;
@@ -470,14 +444,22 @@ main {
   box-sizing: content-box;
   opacity: 0;
   transform: translateY(1em);
-  animation: cardslidein 1s calc(var(--nth-child) * 300ms) forwards;
   overflow: hidden;
+}
+.options__option:nth-child(1) {
+  animation: cardslidein 1s 300ms forwards;
+}
+.options__option:nth-child(2) {
+  animation: cardslidein 1s 600ms forwards;
+}
+.options__option:nth-child(3) {
+  animation: cardslidein 1s 900ms forwards;
 }
 .options__option--confirmation {
   position: absolute;
   right: -100px;
   background-color: #99e2d0;
-  transition: 1s;
+  transition: 1000ms;
   height: 72px;
   width: 100px;
   display: flex;
@@ -494,19 +476,19 @@ main {
   display: inline-block;
 }
 .options__option:hover .options__option--confirmation {
-  transition: 1s;
+  transition: 400ms;
   transform: translateX(-100px);
 }
 .options__option:hover .options__option--confirmation--circle {
-  transition: 1000ms;
+  transition: 500ms;
   transform: rotate(360deg);
 }
 .options__option:hover .options__detail {
-  transition: 1s;
+  transition: 400ms;
   width: calc(100% - 90px);
 }
 .options__option:hover .options__heading {
-  transition: 1s;
+  transition: 400ms;
   width: calc(100% - 90px);
 }
 .options__heading {
@@ -741,24 +723,25 @@ main {
 .card .card__iconheart {
   align-self: flex-end;
   font-size: 24px;
-  font-weight: 100;
   position: relative;
   top: -41px;
   left: -10px;
-  cursor: pointer;
-  transition: all 125ms ease-in-out;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+  background-image: linear-gradient(0deg, #ff79da 0%, #9356dc 33%, transparent 50%);
+  transition: all 700ms ease-in-out;
+  background-size: 100% 200%;
+  background-position: top;
+  transform-origin: top;
+  -webkit-text-fill-color: transparent;
 }
 .card .card__iconheart:hover {
-  color: #fff;
-  font-weight: 600;
-  background-clip: border-box;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-text-stroke-color: transparent;
   background-position: bottom;
-  animation: animationheart 125ms forwards;
+  padding: 1px;
 }
-
-/*@import "./pages/project";*/
 
 /*# sourceMappingURL=style.css.map */

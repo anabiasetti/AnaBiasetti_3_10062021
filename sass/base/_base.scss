@@ -18,15 +18,3 @@ body {
   height: 100%;
   margin: auto;
 }
-
-// Pour animations avec delay 'nth child'
-// https://stackoverflow.com/questions/16989585/css-3-slide-in-from-left-transition
-:nth-child(1) {
-  --nth-child: 1;
-}
-:nth-child(2) {
-  --nth-child: 2;
-}
-:nth-child(3) {
-  --nth-child: 3;
-}
